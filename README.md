@@ -1,20 +1,20 @@
 # Zilla-Chain
-##Specifications and uses of the Zilla Utility Chain
+## Specifications and uses of the Zilla Utility Chain
 
 Zilla Chain version 0.1.0 beta
 
 "ZILLA" is an ticker for the ChainZilla Platform. ZILLA is a utility token, which gives our users access to the services provided by ChainZilla.io
 
 
-##What is a utility token?
+## What is a utility token?
 
 A utility token represents access to a future product or service. When you buy a utility token, you are buying your “right” to use a service that’s being developed by a project once it’s finished and launched. 
 
-##What rights will I have if I hold the ZILLA utility token?
+## What rights will I have if I hold the ZILLA utility token?
 
 ZILLA token holders will have right to exchange their tokens for ChainZilla services such as Komodo notarizations, blockchain deployment, app & web development, and cyber security services. In addition we plan to establish strong governance over our operations, token holders will be able to participate in community votes when ChainZilla deems appropriate.
 
-##ZILLA Tech Specification
+## ZILLA Tech Specification
 
     Max Supply: 11 Million ZILLA
     Block Time: 1M
@@ -23,7 +23,7 @@ ZILLA token holders will have right to exchange their tokens for ChainZilla serv
     This version of Komodo contains Bitcore support for komodo and all its assetchains.
 
 
-##List of Komodo Platform Technologies
+## List of Komodo Platform Technologies
 
     Delayed Proof of Work (dPoW) - Additional security layer.
     zk-SNARKs - Komodo Platform's privacy technology
