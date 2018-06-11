@@ -1,30 +1,42 @@
-Komodo 1.0.15
+# Zilla-Chain
+##Specifications and uses of the Zilla Utility Chain
 
-## Komodod
-This software is Komodo client, generally you will use this if you want to mine KMD or setup a full node.
-It downloads and stores the entire history of Komodo transactions; depending on the speed of your computer and network connection, the synchronization process could take a day or more once the blockchain has reached a significant size.
+Zilla Chain version 0.1.0 beta
 
-## Development Resources
-- Komodo Web: [https://komodoplatform.com/](https://komodoplatform.com/)
-- Organization web: [https://komodoplatform.com/](https://komodoplatform.com/)
-- Forum: [https://forum.komodoplatform.com/](https://forum.komodoplatform.com/)
-- Mail: [info@komodoplatform.com](mailto:info@komodoplatform.com)
-- Support: [https://support.komodoplatform.com/support/home](https://support.komodoplatform.com/support/home)
-- Knowledgebase & How-to: [https://komodoplatform.atlassian.net/wiki/spaces/KPSD/pages](https://komodoplatform.atlassian.net/wiki/spaces/KPSD/pages)
-- API references: [http://docs.supernet.org/](http://docs.supernet.org/) #Not up to date.
-- Whitepaper: [Komodo Whitepaper](https://komodoplatform.com/wp-content/uploads/2018/03/2018-03-12-Komodo-White-Paper-Full.pdf)
-- Komodo Platform public material: [Komodo Platform public material](https://docs.google.com/document/d/1AbhWrtagu4vYdkl-vsWz-HSNyNvK-W-ZasHCqe7CZy0)
+"ZILLA" is an ticker for the ChainZilla Platform. ZILLA is a utility token, which gives our users access to the services provided by ChainZilla.io
 
-## List of Komodo Platform Technologies
-- Delayed Proof of Work (dPoW) - Additional security layer.
-- zk-SNARKs - Komodo Platform's privacy technology
-- Jumblr - Decentralized tumbler for KMD and other cryptocurrencies
-- Assetchains - Easy way to fork Komodo coin
-- Pegged Assets - Chains that maintain a peg to fiat currencies
-- Peerchains - Scalability solution where sibling chains form a network of blockchains
-- More in depth covered [here](https://docs.google.com/document/d/1AbhWrtagu4vYdkl-vsWz-HSNyNvK-W-ZasHCqe7CZy0)
-- Also note you receive 5% APR on your holdings.
-[See this article for more details](https://komodoplatform.atlassian.net/wiki/spaces/KPSD/pages/20480015/Claim+KMD+Interest+in+Agama)
+
+##What is a utility token?
+
+A utility token represents access to a future product or service. When you buy a utility token, you are buying your “right” to use a service that’s being developed by a project once it’s finished and launched. 
+
+##What rights will I have if I hold the ZILLA utility token?
+
+ZILLA token holders will have right to exchange their tokens for ChainZilla services such as Komodo notarizations, blockchain deployment, app & web development, and cyber security services. In addition we plan to establish strong governance over our operations, token holders will be able to participate in community votes when ChainZilla deems appropriate.
+
+##ZILLA Tech Specification
+
+    Max Supply: 11 Million ZILLA
+    Block Time: 1M
+    Block Reward: 0.00001
+    Mining Algorithm: Equihash
+    This version of Komodo contains Bitcore support for komodo and all its assetchains.
+
+
+##List of Komodo Platform Technologies
+
+    Delayed Proof of Work (dPoW) - Additional security layer.
+    zk-SNARKs - Komodo Platform's privacy technology
+    Jumblr - Decentralized tumbler for KMD and other cryptocurrencies
+    Assetchains - Easy way to fork Komodo coin
+    Pegged Assets - Chains that maintain a peg to fiat currencies
+    Peerchains - Scalability solution where sibling chains form a network of blockchains
+    More in depth covered here
+    Also note you receive 5% APR on your holdings. See this article for more details
+
+
+## About Komodo
+Komodo is based on Zcash and has been  by our innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR or our assetchain capabilities (one click plug and play blockchain solutions). More details are available under https://komodoplatform.com/.
 
 ## Tech Specification
 - Max Supply: 200 million KMD.
@@ -32,8 +44,17 @@ It downloads and stores the entire history of Komodo transactions; depending on 
 - Block Reward: 3KMD
 - Mining Algorithm: Equihash
 
-## About this Project
-Komodo is based on Zcash and has been  by our innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR or our assetchain capabilities (one click plug and play blockchain solutions). More details are available under https://komodoplatform.com/.
+Development Resources
+
+    Komodo Web: https://komodoplatform.com/
+    Organization web: https://komodoplatform.com/
+    Forum: https://forum.komodoplatform.com/
+    Mail: info@komodoplatform.com
+    Support: https://support.komodoplatform.com/support/home
+    Knowledgebase & How-to: https://komodoplatform.atlassian.net/wiki/spaces/KPSD/pages
+    API references: http://docs.supernet.org/ #Not up to date.
+    Whitepaper: Komodo Whitepaper
+    Komodo Platform public material: Komodo Platform public material
 
 ## Getting started
 Dependencies
