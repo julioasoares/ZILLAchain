@@ -1,5 +1,5 @@
 # Zilla-Chain
-## Specifications and uses of the Zilla Utility Chain
+## Specifications and uses of the ZILLA Utility Chain
 
 Zilla Chain version 0.1.0 beta
 
@@ -63,11 +63,39 @@ Development Resources
 ## Getting started
 Dependencies
 ------------
+Install Komodo: https://docs.komodoplatform.com/en/latest/komodo/install-Komodo-manually.html#installing-komodo-manually
 
-```shell
-#The following packages are needed:
-sudo apt-get install build-essential pkg-config libc6-dev m4 g++-multilib autoconf libtool ncurses-dev unzip git python python-zmq zlib1g-dev wget libcurl4-openssl-dev bsdmainutils automake curl
-```
+After installing the Komodo repository, follow the steps:
+
+`cd Komodo/src`
+
+# Mainnet
+`./komodod -ac_name=ZILLA -ac_supply=11000000 -addnode=54.39.23.248 -gen &`
+
+# Testnet
+`./komodod -ac_name=TESTZILLA -ac_supply=11000000 -addnode=158.69.0.53 &`
+
+Once the ZILLA chain is synched, you are able to use the wallet functionality
+
+# Commands 
+In order to perform a command you must navigate to
+
+`cd komodo src`
+
+and execute commands with the following prefix
+
+`./fiat-cli ZILLA`
+
+i.e. Command to get wallet info
+
+`./fiat-cli ZILLA getinfo`
+
+# All Commands
+
+
+
+
+
 
 Komodo
 ------
@@ -105,38 +133,6 @@ This release is considered deprecated one year after the release day. There
 is an automatic deprecation shutdown feature which will halt the node some
 time after this one year period. The automatic feature is based on block
 height and can be explicitly disabled.
-
-
-# to update an existing version, `git checkout dPoW` if not on that branch already
-```shell
-git pull
-./zcutil/fetch-params.sh
-./zcutil/build.sh -j8
-```
-To reset the blockchain, from *~/.komodo* `rm -rf blocks chainstate debug.log komodostate db.log`
-
-Create komodo.conf
-------------------
-
-Please use a secure rpcuser and rpcpassword to ensure your funds safety.
-
-```
-cd ~
-mkdir .komodo
-cd .komodo
-pico komodo.conf
-#Add the following lines to the komodo.conf file:
-rpcuser=dontuseweakusernameoryougetrobbed
-rpcpassword=dontuseweakpasswordoryougetrobbed
-txindex=1
-addnode=5.9.102.210
-addnode=78.47.196.146
-addnode=178.63.69.164
-addnode=88.198.65.74
-addnode=5.9.122.241
-addnode=144.76.94.38
-addnode=89.248.166.91
-```
 
 
 **Komodo is unfinished and highly experimental.** Use at your own risk.
