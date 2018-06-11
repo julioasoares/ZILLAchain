@@ -43,34 +43,6 @@ ZILLA token holders will have right to exchange their tokens for ChainZilla serv
 ## About CHAINZILLA
 
 ChainZilla was conceived with the purpose of raising the bar in terms of the quality of the applications and blockchains being used in the industry. Additionally, our goal is to facilitate the use of open source technology such as atomic swaps, native blockchain deployment, and smart contracts in different sectors. These fields includes real estate, finance, non-profit, and academic. Corporations are dedicating resources to find out how much business they can gain by adopting blockchain technology. Blockchain has the potential of a trans-formative technology. It allows solving two important issues, those of centralized trust and the speed of operations. Blockchain will not remain a purely fintech phenomenon and has set itself up for wider B2B applications in the coming decade. ChainZilla will play a major role in bringing blockchain technology to regions that are still in their infancy in regards to blockchain and fintech technology such as LATAM. 
-    
-## List of Komodo Platform Technologies
-
-    Delayed Proof of Work (dPoW) - Additional security layer.
-    zk-SNARKs - Komodo Platform's privacy technology
-    Jumblr - Decentralized tumbler for KMD and other cryptocurrencies
-    Assetchains - Easy way to fork Komodo coin
-    Pegged Assets - Chains that maintain a peg to fiat currencies
-    Peerchains - Scalability solution where sibling chains form a network of blockchains
-    More in depth covered here
-    Also note you receive 5% APR on your holdings. See this article for more details
-
-## About Komodo
-
-Komodo is based on Zcash and has been  by our innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR or our assetchain capabilities (one click plug and play blockchain solutions). More details are available under https://komodoplatform.com/.
-
-Development Resources
-
-    Komodo Web: https://komodoplatform.com/
-    Organization web: https://komodoplatform.com/
-    Forum: https://forum.komodoplatform.com/
-    Mail: info@komodoplatform.com
-    Support: https://support.komodoplatform.com/support/home
-    Knowledgebase & How-to: https://komodoplatform.atlassian.net/wiki/spaces/KPSD/pages
-    API references: http://docs.supernet.org/ #Not up to date.
-    Whitepaper: Komodo Whitepaper
-    Komodo Platform public material: Komodo Platform public material
-
 ## Getting started
 Dependencies
 ------------
@@ -196,6 +168,35 @@ i.e. Command to get wallet info
 cd komodo/src
 ./komodo-cli -ac_name=ZILLA help
 ```
+## About Komodo
+
+Komodo is based on Zcash and has been  by our innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR or our assetchain capabilities (one click plug and play blockchain solutions). More details are available under https://komodoplatform.com/.
+
+## List of Komodo Platform Technologies
+
+    Delayed Proof of Work (dPoW) - Additional security layer.
+    zk-SNARKs - Komodo Platform's privacy technology
+    Jumblr - Decentralized tumbler for KMD and other cryptocurrencies
+    Assetchains - Easy way to fork Komodo coin
+    Pegged Assets - Chains that maintain a peg to fiat currencies
+    Peerchains - Scalability solution where sibling chains form a network of blockchains
+    More in depth covered here
+    Also note you receive 5% APR on your holdings. See this article for more details
+
+
+Development Resources
+
+    Komodo Web: https://komodoplatform.com/
+    Organization web: https://komodoplatform.com/
+    Forum: https://forum.komodoplatform.com/
+    Mail: info@komodoplatform.com
+    Support: https://support.komodoplatform.com/support/home
+    Knowledgebase & How-to: https://komodoplatform.atlassian.net/wiki/spaces/KPSD/pages
+    API references: http://docs.supernet.org/ #Not up to date.
+    Whitepaper: Komodo Whitepaper
+    Komodo Platform public material: Komodo Platform public material
+
+
 
 Komodo
 ------
