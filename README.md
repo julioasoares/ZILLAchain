@@ -170,7 +170,7 @@ cd komodo/src
 ```
 ## About Komodo
 
-Komodo is based on Zcash and has been  by our innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR or our assetchain capabilities (one click plug and play blockchain solutions). More details are available under https://komodoplatform.com/.
+Komodo is based on Zcash and has been  by their innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR or our assetchain capabilities (one click plug and play blockchain solutions). More details are available under https://komodoplatform.com/.
 
 ## List of Komodo Platform Technologies
 
@@ -184,7 +184,7 @@ Komodo is based on Zcash and has been  by our innovative consensus algorithm cal
     Also note you receive 5% APR on your holdings. See this article for more details
 
 
-Development Resources
+## Komodo Development Resources
 
     Komodo Web: https://komodoplatform.com/
     Organization web: https://komodoplatform.com/
@@ -197,36 +197,6 @@ Development Resources
     Komodo Platform public material: Komodo Platform public material
 
 
-
-Komodo
-------
-We have a release process that goes through several stages before it reaches master. This allows the most conservative users just use the master branch, which is only updated after the other branches have signed off on a release.
-
-99% of the activity is in the dev branch, this is where I am testing each change one by one and there are literally thousands of updates. Only use this branch if you really want to be on the bleeding edge. I try to keep things stable, but there are times where necessarily there are bugs in the dev branch, since I am actively developing and debugging here. A good rule is to wait for at least 4 hours from the last update before using the dev branch (unless you know what you are doing)
-
-After things look good in the dev branch, it is propagated to the beta branch, this is the version the notary nodes use. They are knowledegable command line server guys and so they have a keen eye for anything that wasnt caught during the dev cycle.
-
-After the notary nodes verify things are working and the latest release is deemed stable, it is propagated to the dPoW branch. From here an automated Jenkins process builds it for all OS, and since the notary nodes are all unix, it is possible for some issues to be caught at this stage. The dPoW branch is what goes into the GUI installers.
-
-After the GUI are updated and released and it is verified that no significant support issues were created, the master branch is finally updated.
-
-Master branch: exchanges and users that build from the repo without changing branches
-dPoW branch: autobuild into GUI installers, unix, osx, windows
-beta branch: notary nodes, command line unix
-dev branch: bleeding edge, possibly wont even compile, multiple updates per hour
-
-```shell
-git clone https://github.com/jl777/komodo
-cd komodo
-#you might want to: git checkout <branch>; git pull
-./zcutil/fetch-params.sh
-# -j8 uses 8 threads - replace 8 with number of threads you want to use
-./zcutil/build.sh -j8
-#This can take some time.
-```
-
-**komodo is experimental and a work-in-progress.** Use at your own risk.
-
 Deprecation Policy
 ------------------
 
@@ -236,28 +206,13 @@ time after this one year period. The automatic feature is based on block
 height and can be explicitly disabled.
 
 
-**Komodo is unfinished and highly experimental.** Use at your own risk.
+**Komodo is unfinished and highly experimental, use at your own risk.**
 
-Where do I begin?
------------------
-We have a guide for joining the main Zcash network:
-https://github.com/zcash/zcash/wiki/1.0-User-Guide
-
-### Need Help?
-* See the documentation at the [Zcash Wiki](https://github.com/zcash/zcash/wiki)
-for help and more information.
-* Ask for help on the [Zcash](https://forum.z.cash/) forum.
-Participation in the Zcash project is subject to a
-[Code of Conduct](code_of_conduct.md).
 
 Building
 --------
 Build Zcash along with most dependencies from source by running
 `./zcutil/build.sh`. Currently only Linux is officially supported.
-
-License
--------
-For license information see the file [COPYING](COPYING).
 
 **NOTE TO EXCHANGES:**
 https://bitcointalk.org/index.php?topic=1605144.msg17732151#msg17732151
@@ -322,4 +277,7 @@ Instead of generating 1 secret address, generate 100 and make a script file with
 And make sure to delete all traces of this when the JUMBLR is finished. You will end up with 100 addresses that have an average of 1000 KMD each. So as long as you are careful and dont do a 10,000 KMD transaction (that will link 10 of your secret addresses together), you can appear as 100 different people each with 1000 KMD.
 
 
+License
+-------
+For license information see the file [COPYING](COPYING).
 
