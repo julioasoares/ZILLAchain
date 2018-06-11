@@ -104,14 +104,16 @@ i.e. Command to get wallet info
 `./fiat-cli ZILLA getinfo`
 
 # All Commands
-== Addressindex ==
+
+
+## Addressindex 
 getaddressbalance
 getaddressdeltas
 getaddressmempool
 getaddresstxids
 getaddressutxos
 
-== Blockchain ==
+## Blockchain
 MoMoMdata symbol kmdheight notarized_height
 allMoMs kmdstarti kmdendi
 calc_MoM height MoMdepth
@@ -119,7 +121,6 @@ getbestblockhash
 getblock "hash|height" ( verbose )
 getblockchaininfo
 getblockcount
-
 getblockhash index
 getblockhashes timestamp
 getblockheader "hash" ( verbose )
@@ -143,21 +144,21 @@ txMoMproof needs a txid
 verifychain ( checklevel numblocks )
 verifytxoutproof "proof"
 
-== Control ==
+## Control 
 getinfo
 help ( "command" )
 stop
 
-== Disclosure ==
+## Disclosure
 z_getpaymentdisclosure "txid" "js_index" "output_index" ("message")
 z_validatepaymentdisclosure "paymentdisclosure"
 
-== Generating ==
+## Generating
 generate numblocks
 getgenerate
 setgenerate generate ( genproclimit )
 
-== Mining ==
+## Mining
 getblocksubsidy height
 getblocktemplate ( "jsonrequestobject" )
 getlocalsolps
@@ -167,7 +168,7 @@ getnetworksolps ( blocks height )
 prioritisetransaction <txid> <priority delta> <fee delta>
 submitblock "hexdata" ( "jsonparametersobject" )
 
-== Network ==
+## Network
 addnode "node" "add|remove|onetry"
 clearbanned
 disconnectnode "node"
@@ -181,7 +182,7 @@ listbanned
 ping
 setban "ip(/netmask)" "add|remove" (bantime) (absolute)
 
-== Rawtransactions ==
+## Rawtransactions
 createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,...}
 decoderawtransaction "hexstring"
 decodescript "hex"
@@ -190,7 +191,7 @@ getrawtransaction "txid" ( verbose )
 sendrawtransaction "hexstring" ( allowhighfees )
 signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )
 
-== Util ==
+## Util
 createmultisig nrequired ["key",...]
 estimatefee nblocks
 estimatepriority nblocks
@@ -204,7 +205,7 @@ validateaddress "komodoaddress"
 verifymessage "komodoaddress" "signature" "message"
 z_validateaddress "zaddr"
 
-== Wallet ==
+## Wallet
 addmultisigaddress nrequired ["key",...] ( "account" )
 backupwallet "destination"
 dumpprivkey "komodoaddress"
