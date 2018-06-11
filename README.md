@@ -14,13 +14,23 @@ A utility token represents access to a future product or service. When you buy a
 
 ZILLA token holders will have right to exchange their tokens for ChainZilla services such as Komodo notarizations, blockchain deployment, app & web development, and cyber security services. In addition we plan to establish strong governance over our operations, token holders will be able to participate in community votes when ChainZilla deems appropriate.
 
-## ZILLA Tech Specification
+## ZILLA Mainnet Tech Specification
 
     Max Supply: 11 Million ZILLA
     Block Time: 1M
     Block Reward: 0.00001
     Mining Algorithm: Equihash
+    RPCPORT: 10041
     This version of Komodo Independent Chain contains Bitcore support for komodo and all its assetchains.
+    
+## TESTZILLA Tech Specification
+
+    Max Supply: 11 Million ZILLA
+    Block Time: 1M
+    Block Reward: 0.00001
+    Mining Algorithm: Equihash
+    RPCPORT: 8250
+    This version of Komodo Independent Chain contains Bitcore support for komodo and all its assetchains.    
 
 ## CHAINZILLA Resources
 
@@ -46,6 +56,7 @@ ChainZilla was conceived with the purpose of raising the bar in terms of the qua
     Also note you receive 5% APR on your holdings. See this article for more details
 
 ## About Komodo
+
 Komodo is based on Zcash and has been  by our innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR or our assetchain capabilities (one click plug and play blockchain solutions). More details are available under https://komodoplatform.com/.
 
 Development Resources
@@ -69,6 +80,8 @@ After installing the Komodo repository, follow the steps:
 
 `cd Komodo/src`
 
+# Now run the following command to start the ZILLA chain or TESTZILLA chain. 
+
 # Mainnet
 `./komodod -ac_name=ZILLA -ac_supply=11000000 -addnode=54.39.23.248 -gen &`
 
@@ -91,10 +104,166 @@ i.e. Command to get wallet info
 `./fiat-cli ZILLA getinfo`
 
 # All Commands
+== Addressindex ==
+getaddressbalance
+getaddressdeltas
+getaddressmempool
+getaddresstxids
+getaddressutxos
 
+== Blockchain ==
+MoMoMdata symbol kmdheight notarized_height
+allMoMs kmdstarti kmdendi
+calc_MoM height MoMdepth
+getbestblockhash
+getblock "hash|height" ( verbose )
+getblockchaininfo
+getblockcount
 
+getblockhash index
+getblockhashes timestamp
+getblockheader "hash" ( verbose )
+getchaintips
+getdifficulty
+getmempoolinfo
+getrawmempool ( verbose )
+getspentinfo
+gettxout "txid" n ( includemempool )
+gettxoutproof ["txid",...] ( blockhash )
+gettxoutsetinfo
+height_MoM height
+kvsearch key
+kvupdate key value flags/passphrase
+minerids needs height
+notaries height timestamp
+paxpending needs no args
+paxprice "base" "rel" height
+paxprices "base" "rel" maxsamples
+txMoMproof needs a txid
+verifychain ( checklevel numblocks )
+verifytxoutproof "proof"
 
+== Control ==
+getinfo
+help ( "command" )
+stop
 
+== Disclosure ==
+z_getpaymentdisclosure "txid" "js_index" "output_index" ("message")
+z_validatepaymentdisclosure "paymentdisclosure"
+
+== Generating ==
+generate numblocks
+getgenerate
+setgenerate generate ( genproclimit )
+
+== Mining ==
+getblocksubsidy height
+getblocktemplate ( "jsonrequestobject" )
+getlocalsolps
+getmininginfo
+getnetworkhashps ( blocks height )
+getnetworksolps ( blocks height )
+prioritisetransaction <txid> <priority delta> <fee delta>
+submitblock "hexdata" ( "jsonparametersobject" )
+
+== Network ==
+addnode "node" "add|remove|onetry"
+clearbanned
+disconnectnode "node"
+getaddednodeinfo dns ( "node" )
+getconnectioncount
+getdeprecationinfo
+getnettotals
+getnetworkinfo
+getpeerinfo
+listbanned
+ping
+setban "ip(/netmask)" "add|remove" (bantime) (absolute)
+
+== Rawtransactions ==
+createrawtransaction [{"txid":"id","vout":n},...] {"address":amount,...}
+decoderawtransaction "hexstring"
+decodescript "hex"
+fundrawtransaction "hexstring"
+getrawtransaction "txid" ( verbose )
+sendrawtransaction "hexstring" ( allowhighfees )
+signrawtransaction "hexstring" ( [{"txid":"id","vout":n,"scriptPubKey":"hex","redeemScript":"hex"},...] ["privatekey1",...] sighashtype )
+
+== Util ==
+createmultisig nrequired ["key",...]
+estimatefee nblocks
+estimatepriority nblocks
+invalidateblock "hash"
+jumblr_deposit "depositaddress"
+jumblr_pause
+jumblr_resume
+jumblr_secret "secretaddress"
+reconsiderblock "hash"
+validateaddress "komodoaddress"
+verifymessage "komodoaddress" "signature" "message"
+z_validateaddress "zaddr"
+
+== Wallet ==
+addmultisigaddress nrequired ["key",...] ( "account" )
+backupwallet "destination"
+dumpprivkey "komodoaddress"
+dumpwallet "filename"
+encryptwallet "passphrase"
+getaccount "ZILLA_address"
+getaccountaddress "account"
+getaddressesbyaccount "account"
+getbalance ( "account" minconf includeWatchonly )
+getnewaddress ( "account" )
+getrawchangeaddress
+getreceivedbyaccount "account" ( minconf )
+getreceivedbyaddress "ZILLA_address" ( minconf )
+gettransaction "txid" ( includeWatchonly )
+getunconfirmedbalance
+getwalletinfo
+importaddress "address" ( "label" rescan )
+importprivkey "komodoprivkey" ( "label" rescan )
+importwallet "filename"
+keypoolrefill ( newsize )
+listaccounts ( minconf includeWatchonly)
+listaddressgroupings
+listlockunspent
+listreceivedbyaccount ( minconf includeempty includeWatchonly)
+listreceivedbyaddress ( minconf includeempty includeWatchonly)
+listsinceblock ( "blockhash" target-confirmations includeWatchonly)
+listtransactions ( "account" count from includeWatchonly)
+listunspent ( minconf maxconf  ["address",...] )
+lockunspent unlock [{"txid":"txid","vout":n},...]
+move "fromaccount" "toaccount" amount ( minconf "comment" )
+resendwallettransactions
+sendfrom "fromaccount" "toZILLAaddress" amount ( minconf "comment" "comment-to" )
+sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
+sendtoaddress "ZILLA_address" amount ( "comment" "comment-to" subtractfeefromamount )
+setaccount "ZILLA_address" "account"
+settxfee amount
+signmessage "ZILLA address" "message"
+z_exportkey "zaddr"
+z_exportviewingkey "zaddr"
+z_exportwallet "filename"
+z_getbalance "address" ( minconf )
+z_getnewaddress
+z_getoperationresult (["operationid", ... ])
+z_getoperationstatus (["operationid", ... ])
+z_gettotalbalance ( minconf includeWatchonly )
+z_importkey "zkey" ( rescan startHeight )
+z_importviewingkey "vkey" ( rescan startHeight )
+z_importwallet "filename"
+z_listaddresses ( includeWatchonly )
+z_listoperationids
+z_listreceivedbyaddress "address" ( minconf )
+z_mergetoaddress ["fromaddress", ... ] "toaddress" ( fee ) ( transparent_limit ) ( shielded_limit ) ( memo )
+z_sendmany "fromaddress" [{"address":... ,"amount":...},...] ( minconf ) ( fee )
+z_shieldcoinbase "fromaddress" "tozaddress" ( fee ) ( limit )
+zcbenchmark benchmarktype samplecount
+zcrawjoinsplit rawtx inputs outputs vpub_old vpub_new
+zcrawkeygen
+zcrawreceive zcsecretkey encryptednote
+zcsamplejoinsplit
 
 
 Komodo
