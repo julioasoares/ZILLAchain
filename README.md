@@ -10,9 +10,9 @@ Zilla Chain version 0.1.0 beta
 
 A utility token represents access to a future product or service. When you buy a utility token, you are buying your “right” to use a service that’s being developed by a project once it’s finished and launched. ChainZilla plans to extend the functionalities and implement them into the company structure and services we offer. 
 
-## What rights will I have if I hold the ZILLA utility token?
+## How may I use the ZILLA utility token?
 
-ZILLA token holders will have right to exchange their tokens for ChainZilla services such as Komodo notarizations, blockchain deployment, app & web development, and cyber security services. In addition we plan to establish strong governance over our operations, token holders will be able to participate in community votes when ChainZilla deems appropriate.
+ZILLA token holders are able to exchange their tokens for ChainZilla services such as Komodo notarizations, blockchain deployment, app & web development, and cyber security services. In addition we plan to establish strong governance over our operations, token holders will be able to participate in community votes when ChainZilla deems appropriate.
 
 ## ZILLA Mainnet Tech Specification
 
