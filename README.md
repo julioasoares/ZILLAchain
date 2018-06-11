@@ -138,40 +138,8 @@ addnode=144.76.94.38
 addnode=89.248.166.91
 ```
 
-Start mining
-------------
 
-```shell
-#iguana documentation shows how to get the btcpubkey and wifstrs that need to be used
-#bitcoin also need to be installed with txindex=1 and with rpc enabled
-cd ~
-cd komodo
-#This will return your pubkey eg. "0259e137e5594cf8287195d13aed816af75bd5c04ae673296b51f66e7e8346e8d8" for your address
-./src/komodo-cli validateaddress <yourwalletaddres>
-#This will give the privkey of your wallet address
-./src/komodo-cli dumpprivkey <yourwalletaddres>
-#This will import the privkey to be sure the mined coins are placed into your wallet address
-./src/komodo-cli importprivkey <yourwalletprivkey>
-#To stop the daemon:
-./src/komodo-cli stop
-#This starts komodo notary - replace genproclimit with number of threads you want to use and add your pubkey
-./src/komodod -gen -genproclimit=2 -notary -pubkey="0259e137e5594cf8287195d13aed816af75bd5c04ae673296b51f66e7e8346e8d8" &
-#This will get the stats:
-./src/komodo-cli getinfo
-#To view the process:
-ps -ef | grep komodod
-#To stop the daemon:
-./src/komodo-cli stop
-
-#To view komodod output:
-tail -f ~/.komodo/debug.log
-#To view all command
-./src/komodo-cli help
-ASSETCHAINS: -ac_name=name -ac_supply=nnnnn
-Both komodod and komodo-cli recognize -ac_name=option so you can create fork from the commandline
-```
-=======
-**Zcash is unfinished and highly experimental.** Use at your own risk.
+**Komodo is unfinished and highly experimental.** Use at your own risk.
 
 Where do I begin?
 -----------------
