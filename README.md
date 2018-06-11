@@ -3,12 +3,12 @@
 
 Zilla Chain version 0.1.0 beta
 
-"ZILLA" is an ticker for the ChainZilla Platform. ZILLA is a utility token, which gives our users access to the services provided by ChainZilla.io
+"ZILLA" is the ticker for the ChainZilla token. ZILLA is a utility token, which gives our users access to the services provided by ChainZilla.io
 
 
 ## What is a utility token?
 
-A utility token represents access to a future product or service. When you buy a utility token, you are buying your “right” to use a service that’s being developed by a project once it’s finished and launched. 
+A utility token represents access to a future product or service. When you buy a utility token, you are buying your “right” to use a service that’s being developed by a project once it’s finished and launched. ChainZilla plans to extend the functionalities and implement them into the company structure and services we offer. 
 
 ## What rights will I have if I hold the ZILLA utility token?
 
@@ -20,9 +20,16 @@ ZILLA token holders will have right to exchange their tokens for ChainZilla serv
     Block Time: 1M
     Block Reward: 0.00001
     Mining Algorithm: Equihash
-    This version of Komodo contains Bitcore support for komodo and all its assetchains.
+    This version of Komodo Independent Chain contains Bitcore support for komodo and all its assetchains.
 
+## CHAINZILLA Resources
 
+    Website: https://www.chainzilla.io
+    Twitter: https://twitter.com/Chainzillaio
+    HelpDesk: http://support.chainzilla.io/support/home
+    BitcoinTalk: https://bitcointalk.org/index.php?topic=4456446.msg39886899#msg39886899
+    Email: contact@chainzilla.io   
+    
 ## List of Komodo Platform Technologies
 
     Delayed Proof of Work (dPoW) - Additional security layer.
@@ -37,12 +44,6 @@ ZILLA token holders will have right to exchange their tokens for ChainZilla serv
 
 ## About Komodo
 Komodo is based on Zcash and has been  by our innovative consensus algorithm called dPoW which utilizes Bitcoin's hashrate to store Komodo blockchain information into the Bitcoin blockchain. Other new and native Komodo features are the privacy technology called JUMBLR or our assetchain capabilities (one click plug and play blockchain solutions). More details are available under https://komodoplatform.com/.
-
-## Tech Specification
-- Max Supply: 200 million KMD.
-- Block Time: 1M 2s
-- Block Reward: 3KMD
-- Mining Algorithm: Equihash
 
 Development Resources
 
