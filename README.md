@@ -50,7 +50,7 @@ Install Komodo: https://docs.komodoplatform.com/en/latest/komodo/install-Komodo-
 
 After installing the Komodo repository, follow the steps:
 
-`cd Komodo/src`
+`cd komodo/src`
 
 # Now run the following command to start the ZILLA chain or TESTZILLA chain. 
 
@@ -65,7 +65,7 @@ Once the ZILLA chain is synched, you are able to use the wallet functionality
 # Commands 
 In order to perform a command you must navigate to
 
-`cd komodo src`
+`cd komodo/src`
 
 and execute commands with the following prefix
 
