@@ -44,20 +44,24 @@ Chapter 1 - OP_CHECKCRYPTOCONDITION
 In the prior chapter the utxo was explained. However, the specific mechanism used to send a payment was not explained. Contrary to what most people might think, on the blockchain there are not entries that say "pay X amount to address". Instead what exists is a bitcoin script that must be satisfied in order for the funds to be able to be spent.
 
 Originally, there was the pay to pubkey script:
+```
 <pubkey> <checksig>
-
+```
 About as simple of a payment script that you can get. Basically the pubkey's signature is checked and if it is valid, you get to spend it. Once problem satoshi realized was that with Quantum Computers such payment scripts are vulnerable! So, he made a way to have a cold address, ie. an address whose pubkey isnt known. At least it isnt known until it is spent, so it is only Quantum resistant prior to the first spend. This line of reasoning is why we have one time use addresses and a new change address for each transaction. Maybe in some ways, this is too forward thinking as it makes things a lot more confusing to use and easier to lose track of all the required private keys.
 
 However, it is here to stay and its script is:
+```
 <hash the pubkey> <pubkey> <verify hash matches> <checksig>
+```
 
 With this, the blockchain has what maps to "pay to address", just that the address is actually a base58 encoded (prefix + pubkeyhash). Hey, if it wasnt complicated, it would be easy!
 
 In order to spend a p2pkh (pay to pubkey hash) utxo, you need to divulge the pubkey in addition to having a valid signature. After the first spend from an address, its security is degraded to p2pk (pay to pubkey) as its pubkey is now known. The net result is that each reused address takes 25 extra bytes on the blockchain, and that is why for addresses that are expected to be reused, I just use the p2pk script.
 
 Originally, bitcoin allowed any type of script opcodes to be used directly. The problem was some of them caused problems and satoshi decided to disable them and only allow standard forms of payments. Thus the p2pk and p2pkh became 99%+ of bitcoin transactions. However, going from having a fully scriptable language that can create countless payment scripts (and bugs!), to having just 2... well it was a "short term" limitation. It did last for some years but eventually a compromise p2sh script was allowed to be standard. This is a pay to script hash, so it can have a standard format as the normal p2pkh, but have infinitely more flexibility.
-
+```
 <hash the script> <script> <verify hash matches>
+```
 
 Wait, something is wrong! If it was just that, then anybody that found out what the required script (called redeemscript) was, they could just spend it. I forgot to say that the redeemscript is then used to determine if the payment can be spent or not. So you can have a normal p2pk or p2pkh redeemscript inside a p2sh script.
 
@@ -160,12 +164,12 @@ The role of the rpc calls are to create properly signed rawtransactions that are
 So, there is no MUSTHAVE rpc calls, just a sane convention to follow so it fits into the general pattern.
 
 One thing that I forgot to describe was how to create a special CC address and even though this is not really an rpc issue, it is kind of separate from the core CC functions, so I will show how to do it here:
-
+```
 const char *FaucetCCaddr = "R9zHrofhRbub7ER77B7NrVch3A63R39GuC";
 const char *FaucetNormaladdr = "RKQV4oYs4rvxAWx1J43VnT73rSTVtUeckk";
 char FaucetCChexstr[67] = { "03682b255c40d0cde8faee381a1a50bbb89980ff24539cb8518e294d3a63cefe12" };
 uint8_t FaucetCCpriv[32] = { 0xd4, 0x4f, 0xf2, 0x31, 0x71, 0x7d, 0x28, 0x02, 0x4b, 0xc7, 0xdd, 0x71, 0xa0, 0x39, 0xc4, 0xbe, 0x1a, 0xfe, 0xeb, 0xc2, 0x46, 0xda, 0x76, 0xf8, 0x07, 0x53, 0x3d, 0x96, 0xb4, 0xca, 0xa0, 0xe9 };
-
+```
 Above are the specifics for the faucet CC, but each one has the equivalent in CCcustom.cpp. At the bottom of the file is a big switch statement where these values are copied into an in memory data structure for each CC type. This allows all the CC codebase to access these special addresses in a standard way.
 
 In order to get the above values, follow these steps:
